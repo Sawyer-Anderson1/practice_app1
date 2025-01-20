@@ -28,7 +28,7 @@ class NinjaCard extends StatelessWidget {
           child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.fromLTRB(10.0, 75.0, 10.0, 75.0),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.white30,
@@ -39,14 +39,48 @@ class NinjaCard extends StatelessWidget {
                 image: AssetImage("assets/ninja.jpg"),
               ),
             ),
+            Divider(
+              color: Colors.white30,
+              thickness: 1.0,
+            ),
+            Text(
+              "NAME: Sawyer Anderson",
+              style: TextStyle(
+                color: Colors.white,
+                letterSpacing: 2,
+                fontSize: 30,
+              ),
+            ),
             Text(
               "ID: 2345-23",
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 35
+                letterSpacing: 2,
+                fontSize: 25
               ),
             ),
-          ],
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Icon(
+                    Icons.mail,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "sawyerlynnanderson@icloud.com",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 35.0,
+            )
+            ],
           ),
         ),
       ),
